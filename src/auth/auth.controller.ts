@@ -15,11 +15,12 @@ export class AuthController {
   ) {
     const result = await this.authService.login(loginDto);
     
+    
     response.cookie('accessToken', result.accessToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
-      maxAge: 3600000, // 1 hour
+      maxAge: 3600000 * 24, // 1 day
     });
 
     response.cookie('refreshToken', result.refreshToken, {

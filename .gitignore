@@ -1,0 +1,17 @@
+# Compiled output
+/dist
+/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# OS files
+.DS_Store
